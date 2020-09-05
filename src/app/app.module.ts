@@ -1,3 +1,4 @@
+import { TituloComponent } from './_shared/titulo/titulo.component';
 import { EventoService } from './_services/evento.service';
 import { DateTimeFormatPipePipe } from './_helps/DateTimeFormatPipe.pipe';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,13 +17,22 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
+import { ToastrModule } from 'ngx-toastr';
+import { PalestrantesComponent } from './palestrantes/palestrantes.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ContatosComponent } from './contatos/contatos.component';
+
 
 @NgModule({
    declarations: [
       AppComponent,
       EventosComponent,
       NavComponent,
-      DateTimeFormatPipePipe
+      DateTimeFormatPipePipe,
+      PalestrantesComponent,
+      DashboardComponent,
+      ContatosComponent,
+      TituloComponent
    ],
    imports: [
       BrowserModule,
@@ -34,7 +44,8 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
       TooltipModule.forRoot(),
       BsDatepickerModule.forRoot(),
       BrowserAnimationsModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
+      ToastrModule.forRoot()
    ],
    providers: [
      EventoService
