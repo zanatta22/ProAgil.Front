@@ -37,7 +37,7 @@ export class EventosComponent implements OnInit {
   fileNameToUpdate: string;
 
   constructor(private eventoService: EventoService, private modalService: BsModalService,
-    private fb: FormBuilder, private localeService: BsLocaleService, private toastr: ToastrService)
+              private fb: FormBuilder, private localeService: BsLocaleService, private toastr: ToastrService)
     {
       this.localeService.use('pt-br');
     }
@@ -202,7 +202,7 @@ export class EventosComponent implements OnInit {
               onFileChange(event){
                 const reader = new FileReader();
 
-                if(event.target.files && event.target.files.length) {
+                if (event.target.files && event.target.files.length) {
                   this.file = event.target.files;
                   console.log(this.file);
                 }
